@@ -1,0 +1,174 @@
+.calendar{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.calendar.active{
+    display: block;
+}
+.calendar__years-list-btn{
+    cursor: pointer;
+}
+.calendar__years-list{
+    max-width: 180px;
+    gap: 40px;
+    border-radius: 5px;
+    height: 58px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    justify-content: space-evenly;
+    background-color: #EBECEF;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    position: absolute;
+    top: 0;
+    z-index: 50;
+    left: 95px
+}
+.calendar__year-item{
+    width: 60px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 22px;
+    font-family: 'Urbanist';
+    font-weight: 600;
+    word-wrap: break-word;
+}
+.calendar__year-item:checked{
+    color: #ff0000;
+}
+.calendar::before{
+    content: '';
+    background: #000;
+	position: fixed; 
+	left: 0;
+	top: 0;
+	width: 100%; 
+	height: 100%;
+	opacity: 0.5;
+    z-index: 78;
+}
+.calendar__wrapper{
+    width: 353px;
+    background: #EBECEF;
+    border-radius: 20px;
+    z-index: 200;
+    position: absolute;
+    top: 20%;
+    left: calc(50% - 176.5px);
+    transform: translate3d(0, -1000px, 0 );
+    transition: transform 0.5s ease-in-out;
+  }
+.calendar__wrapper.active{
+    transform: translate3d(0, 0, 0);
+}
+.calendar__header{
+    width: 100%;
+    height: 58px;
+}
+.calendar__header__wrapper{
+    width: 313px;
+    height: 100%;
+    border-bottom: 1px solid #fff;
+    margin: 0 auto;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+.calendar__material-symbols-rounded{
+    width: 24px;
+    height: 24px;
+}
+.calendar__current-date{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 22px;
+    font-family: 'Urbanist';
+    font-weight: 600;
+    word-wrap: break-word;
+}
+.calendar__current-date svg{
+    margin-left: 10px;
+}
+
+.calendar__body{
+    height: fit-content;
+    width: 100%;
+}
+.calendar__body ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    text-align: center;
+    font-family: "Urbanist";
+    text-transform: uppercase;
+    word-wrap: break-word
+}
+
+.calendar__body__weeks{
+    color: #AAAEB6;
+    height: 24px;
+    width: 313px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+    font-size: 10px;
+    font-weight: 500;
+}
+.calendar__body__days{
+    color: #000;
+    width: 313px;
+    font-size: 17px;
+    margin: 0 auto;
+    display: flex;
+    gap: 5.5px;
+    font-weight: 500;
+}
+
+.calendar__body li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% / 7);
+  }
+
+.calendar__body__days li{
+    z-index: 1;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    position: relative;
+    margin-top: 2px;
+  }
+.calendar__body__days li.inactive{
+    color: #aaa;
+}
+
+.calendar__body__days li.active{
+    color: #000;
+  }
+.calendar__body__days  li::before{
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+.calendar__body__days  li.active{
+    color: #FF0000;
+}
+.calendar__body__days  li.checked::before{
+    background: rgba(255, 90, 90, 0.15);
+}
+.calendar__body__days li:not(.active):hover::before{
+    background: #F6F7F9;
+}

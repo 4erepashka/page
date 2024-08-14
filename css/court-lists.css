@@ -1,0 +1,206 @@
+.court-list{
+    display: flex;
+    max-width: 480px;
+    width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    min-height: 852px;
+    overflow-y: scroll;
+    position: relative;
+    display: none;
+}
+.court-list::-webkit-scrollbar {
+    display: none;
+}
+
+.court-list.active{
+    display: flex;
+}
+.court-list::after{
+    content: '';
+    position: absolute;
+    width: 393px;
+    height: 93px;
+    background: linear-gradient(180deg, rgba(246, 247, 249, 0.60) 90%, #919293 100%);
+    filter: blur(5px);
+    bottom: -10px;
+    position: fixed
+}
+
+.court-list__cards{
+    width: 353px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 24px;
+}
+
+
+
+.court-list__cards__card{
+    width: 100%;
+    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #F6F7F9;
+    border-radius: 20px;
+    position: relative;
+}
+.court-list__cards__card:not(:first-child){
+    margin-top: 9.92px;
+}
+.slider-wrapper{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.card-slider{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.card-slides{
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    display: flex;
+    flex-direction: row;
+    scroll-snap-type: x mandatory;
+    scroll-snap-points-x: repeat(100%);
+}
+.card-slides::-webkit-scrollbar{
+   display: none;
+}
+.card-slide{
+    scroll-snap-align: start;
+    min-width: 100%;
+    height: 100%;
+}
+.court-list__cards__card.c1 .card-slide:nth-child(1){
+    background-image: url('../img/tennis.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+.court-list__cards__card.c1 .card-slide:nth-child(2){
+    background-image: url('../img/soccer.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+.court-list__cards__card.c1 .card-slide:nth-child(3){
+    background-image: url('../img/soccer.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+.court-list__cards__card.c1 .card-slide:nth-child(4){
+    background-image: url('../img/soccer.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+.court-list__cards__card.c2 .card-slide:nth-child(1){
+    background-image: url('../img/soccer.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+.court-list__cards__card.c2 .card-slide:nth-child(2){
+    background-image: url('../img/tennis.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+.court-list__cards__card.c2 .card-slide:nth-child(3){
+    background-image: url('../img/soccer.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+.court-list__cards__card.c3 .card-slide:nth-child(4){
+    background-image: url('../img/soccer.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+.slider-indecators{
+    width: fit-content;
+    display: flex;
+    position: absolute;
+    bottom: 8px;
+    left: calc(50% - 36px);
+}
+.slider-indecators svg:not(:first-child){
+    margin-left: 8px;
+}
+.court-list__cards__card__descr{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 16px;
+    padding-left: 16px;
+}
+.court-list__cards__card__descr__title{
+    width: 219px; 
+    height: 19px; 
+    text-align: start; 
+    color: black; 
+    font-size: 20px;
+    font-family: 'Muller';
+    font-weight: 700;
+    word-wrap: break-word"
+}
+.court-list__cards__card__descr__info{
+    width: 281px;
+    height: 25px;
+    color: #72747E;
+    font-size: 13px;
+    font-family: 'Muller';
+    font-weight: 500;
+    word-wrap: break-word;
+    margin-top: 10px;
+}
+.court-list__cards__card__descr__type{
+    width: fit-content;
+    height: 29px;
+    display: flex;
+    align-items: center;
+    color: #F80000;
+    font-size: 17px;
+    font-family: "Muller";
+    font-weight: 700;
+    word-wrap: break-word;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.court-list__cards__card__descr__type svg{
+    margin-right: 6px;
+ }
+.court-list__cards__card__descr__type__icons{
+    width: 63px;
+    height: 34px;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 24px;
+    border: 2px #FF0000 solid;
+    margin-right: 5px;
+}
+.court-list__cards__card__descr__type__icons svg{
+    margin: 0;
+}
+
+
+.search-bar._court-list{
+    width: 353px;
+}

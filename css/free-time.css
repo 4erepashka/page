@@ -1,0 +1,99 @@
+.free-time{
+    width: 100%;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Muller';
+    min-height: 852px;
+    display: none;
+}
+.free-time::-webkit-scrollbar {
+    display: none;
+}
+.free-time.active{
+    display: flex;
+}
+.btn-back{
+    background: #F6F7F9;
+}
+
+.free-time__header{
+    width: 353px;
+    display: flex;
+    margin-top: 54px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.free-time__header .btn-back{
+    position: static;
+}
+
+.free-time__date-data{
+    width: 353px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: #000;
+    font-family: 'Muller';
+    font-size: 20px;
+}
+
+.free-time__date-data__title{
+    font-size: 20px;
+    font-weight: 500;
+    font-weight: 500;
+    font-size: 20px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.free-time__date-data__cards{
+    width: 353px;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 12px;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 11px;
+}
+.free-time__date-data__cards__card{
+    width: 150px;
+    height: 68px;
+    background: #F6F7F9;
+    border-radius: 20px;
+    border-bottom: 1px #EBECEF solid;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.free-time__peoples-data{
+    display: flex;
+    width: 353px;
+    height: fit-content;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 31px;
+    font-weight: 500;
+    font-size: 20px;
+}
+.free-time__peoples-data__title{
+    color: #000;
+    font-family: 'Muller';
+    font-size: 20px;
+}
+.free-time .footer  .free-time-btn{
+    width: 353px;
+}

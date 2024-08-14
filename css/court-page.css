@@ -1,0 +1,370 @@
+.court-page{
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+    overflow-y: scroll;
+    align-items: center;
+    min-height: 852px;
+    display: none;
+}
+.court-page::-webkit-scrollbar {
+    display: none;
+}
+.court-page.active{
+    display: flex;
+}
+.court-page::after{
+    content: '';
+    position: absolute;
+    width: 393px;
+    height: 93px;
+    background: linear-gradient(180deg, rgba(246, 247, 249, 0.60) 90%, #919293 100%);
+    filter: blur(5px);
+    bottom: -10px;
+    position: fixed
+}
+.court-list__cards__card._court-page{
+    background: transparent;
+    border-radius: 0%;
+    margin: 0;
+}
+.court-list__cards__card._court-page .slider-wrapper{
+   min-height: 260px;
+   height: 260px;
+   width: 100%;
+}
+.court-list__cards__card._court-page  .card-slide:nth-child(1){
+    background-image: url('../img/tennis.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+ 
+}
+.court-list__cards__card._court-page  .card-slide:nth-child(2){
+    background-image: url('../img/soccer.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+}
+.court-list__cards__card._court-page  .card-slide:nth-child(3){
+    background-image: url('../img/soccer.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+
+}
+.court-list__cards__card._court-page  .card-slide:nth-child(4){
+    background-image: url('../img/soccer.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+}
+.btn-back{
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 54px;
+    left: 20px;
+    z-index: 10;
+}
+
+.court-page__nav{
+    width: 353px;
+    margin: 0 auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.fire-toggler__btn{
+    width: 63px;
+    height: 34px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-self: right;
+    border: 2px #FF0000 solid;
+    margin-right: 7px;
+}
+input[name="fire-toggler" ]{
+    opacity: 0;
+    display: none;
+}
+.fire-toggler__icon{
+    transform: translate3d(0, 0, 0);
+    transition: transform 1s ease-in-out;
+}
+.fire-toggler__icon path{
+    fill:#686868;
+    transition: fill 1s ease-in-out;
+}
+
+input[name="fire-toggler" ]:checked + .fire-toggler__icon{
+    transform: translate3d(30px, 0, 0);
+    
+}
+input[name="fire-toggler" ]:checked + .fire-toggler__icon path{
+    fill:#FF0000;
+}
+.help-toggler{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 7px;
+}
+
+
+input[name="help-btn" ]{
+    display: none;
+}
+.help-icon path{
+    fill:#AAAAAA;
+    transition: fill 1s ease-in-out;
+}
+input[name="help-btn" ]:checked + .help-icon  path{
+    fill: #FF0000;
+}
+
+.date-btn{
+    width: 50px;
+    height: 50px;
+    background-color: #F6F7F9;
+}
+.court-page__schedule{
+    width: 100%;
+    margin-top: 21px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.court-page__schedule__title{
+    color: black;
+    font-size: 20px;
+    font-family: 'Muller';
+    font-weight: 500;
+    word-wrap: break-word;
+}
+.court-page__schedule__cards{
+   width: 353px;
+   height: fit-content;
+   display: flex;
+   flex-direction: column;
+   margin-top: 24px;
+}
+.court-page__schedule__card{
+   width: 100%;
+   height: 68px;
+   background: #F6F7F9;
+   border-radius: 20px;
+   color: black;
+   display: flex;
+   align-items: center;
+}
+.court-page__schedule__card__content-wrapper{
+   width: 313px;
+   margin: 0 auto;
+   align-items: center;
+   justify-content: space-between;
+   display: flex;
+   flex-direction: row;
+
+}
+.court-page__schedule__cards input[type="checkbox"]{
+   display: none;
+}
+.court-page__schedule__card:hover{
+  background: #DADADA;
+}
+.court-page__schedule__cards input[type="checkbox"]:checked  +  .court-page__schedule__card:not(.active){
+  background: #DADADA;
+}
+.court-page__schedule__card:hover{
+  background: #DADADA;
+}
+.court-page__schedule__card.active{
+   color: #FF0000;
+}
+
+.court-page__schedule__card__date{
+   font-size: 20px;
+   font-family: 'Muller';
+   font-weight: 500;
+   word-wrap: break-word;
+}
+.court-page__schedule__card__add{
+   width: 43px;
+   height: 43px;
+   display: none;
+}
+.court-page__schedule__card__add.active{
+   display: block;
+}
+.court-page__schedule__card__peoples{
+    min-height: 50px;
+    max-width: 110px;
+    height: 50px;
+    overflow: hidden;
+    display: flex;
+}
+.court-page__schedule__card__peoples__img{
+   height: 100%;
+   min-width: 50px;
+   border: 3px solid #fff;
+   border-radius: 50%;
+   position: relative;
+   background-position: center;
+   z-index: 8;
+}
+.court-page__schedule__card.c01  .court-page__schedule__card__peoples__img.c01{
+   background-image: url('../img/ava1.png');
+   z-index: 10;
+   left: 0;
+}
+.court-page__schedule__card.c01  .court-page__schedule__card__peoples__img.c02{
+   background-image: url('../img/ava2.png');
+   z-index: 9;
+}
+.court-page__schedule__card.c01  .court-page__schedule__card__peoples__img.c03{
+   background-image: url('../img/ava3.png');
+   z-index: 8;
+}
+.court-page__schedule__card.c02 .court-page__schedule__card__peoples__img.c01{
+   background-image: url('../img/ava3.png');
+   z-index: 6;
+   right: 2px;
+}
+.court-page__schedule__card.c02 .court-page__schedule__card__peoples__img.c02{
+   background-image: url('../img/ava2.png');
+   z-index: 9;
+   right: 20px;
+}
+.court-page__schedule__card.c02 .court-page__schedule__card__peoples__img.c03{
+   background-image: url('../img/ava1.png');
+   z-index: 10;
+   right: 40px;
+}
+.court-page__schedule__card.c03 .court-page__schedule__card__peoples__img.c01{
+   background-image: url('../img/ava2.png');
+   z-index: 6;
+   right: 2px;
+}
+.court-page__schedule__card.c03 .court-page__schedule__card__peoples__img.c02{
+   background-image: url('../img/ava4.png');
+   z-index: 9;
+   right: 20px;
+}
+.court-page__schedule__card.c03 .court-page__schedule__card__peoples__img.c03{
+   background-image: url('../img/ava5.png');
+   z-index: 10;
+   right: 40px;
+}
+.court-page__schedule__card.c04 .court-page__schedule__card__peoples__img.c01{
+   background-image: url('../img/ava2.png');
+   z-index: 6;
+   left: 20px;
+
+}
+.court-page__schedule__card.c04 .court-page__schedule__card__peoples__img.c02{
+   background-image: url('../img/ava4.png');
+   z-index: 9;
+}
+.court-page__schedule__card.c05 .court-page__schedule__card__peoples__img.c01{
+   background-image: url('../img/ava2.png');
+   z-index: 6;
+   left: 20px;
+}
+.court-page__schedule__card.c05 .court-page__schedule__card__peoples__img.c02{
+   background-image: url('../img/ava4.png');
+   z-index: 9;
+}
+.court-page__schedule__card.c06 .court-page__schedule__card__peoples__img.c01{
+   background-image: url('../img/ava2.png');
+   z-index: 6;
+   left: 20px;
+
+}
+.court-page__schedule__card.c06 .court-page__schedule__card__peoples__img.c02{
+   background-image: url('../img/ava4.png');
+   z-index: 9;
+}
+.court-page__schedule__card.c07 .court-page__schedule__card__peoples__img.c01{
+   background-image: url('../img/ava2.png');
+   z-index: 6;
+}
+
+
+
+.court-page-footer{
+    align-self: center;
+}
+.footer-btn.court-page-btn{
+    width: 353px;
+}
+
+.court-page__popup{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.court-page__popup.active{
+    display: block;
+}
+.court-page__popup::after{
+    content: '';
+    background: #000;
+	position: fixed; 
+	left: 0;
+	top: 0;
+	width: 100%; 
+	height: 100%;
+	opacity: 0.3;
+    z-index: 78;
+}
+.court-page__popup__wrapper{
+    width: 369px;
+    height: 256px;
+    background: #F3F3F3;
+    border-radius: 20px;
+    z-index: 200;
+    position: absolute;
+    top: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: calc(50% - 184.5px);
+    transform: translate3d(0, -1000px, 0 );
+    transition: transform 0.5s ease-in-out;
+}
+.court-page__popup__wrapper.active{
+    transform: translate3d(0, 0, 0);
+}
+.court-page__popup__close-poup{
+   position: absolute;
+   top: 20px;
+   right: 27px;
+
+}
+.court-page__popup__text{
+   height: 168px;
+   width: 291px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 17px;
+   font-family: "Muller";
+   font-weight: 700;
+   word-wrap: break-word;
+
+}
